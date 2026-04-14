@@ -1,9 +1,8 @@
 #include <stdio.h>
 #include <string.h>
-char prod[10][20],in[20],stack[20];
-int n,top=0,ip=0;
 int main(){
-    int len;
+    char prod[10][20],in[20],stack[20];
+    int n,top=0,ip=0,len;
     printf("Enter number of productions: ");
     scanf("%d",&n);
     printf("Enter productions (E=E+E):\n");
