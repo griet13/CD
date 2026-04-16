@@ -33,7 +33,7 @@ int yyerror(const char *s);
 }  
 %token <dval> NUMBER  
 %type <dval> expr  
-%%
+%%  
 input:
       input expr '\n' { printf("Result = %lf\n", $2); }  
     |  
