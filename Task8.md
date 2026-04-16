@@ -32,7 +32,7 @@ int yyerror(const char *s);
     double dval;  
 }  
 %token <dval> NUMBER  
-%type <dval> expr
+%type <dval> expr  
 %%
 input:
       input expr '\n' { printf("Result = %lf\n", $2); }  
@@ -45,12 +45,12 @@ expr:
     | expr '/' expr { $$ = $1 / $3; }  
     | NUMBER        { $$ = $1; }  
     ;
-%%
+%%  
 int yyerror(const char *s)  
 {  
     printf("Syntax error\n");    
     return 0;   
-}
+}  
 int main(void)  
 {  
     yyparse();  
